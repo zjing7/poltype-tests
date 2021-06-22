@@ -1,0 +1,175 @@
+Poltype -- Polarizable atom typer of small molecules for the AMOEBA polarizable force field
+
+Please cite:
+Wu, J.C.; Chattree, G.; Ren, P.Y.; Automation of AMOEBA polarizable force field 
+parameterization for small molecules. Theor Chem Acc. 
+
+Version 2.3.1 May 2021
+
+Copyright (c)  Johnny Wu, Gaurav Chattree, Brandon Walker, Matthew Harger and Pengyu Ren 2019
+
+All Rights Reserved
+##############################################################################################################
+
+Calling: analyze.x /fsx/users/francis/Software/poltype2/stable-2021-06/poltype/VersionFiles/water.xyz -k /fsx/users/francis/Software/poltype2/stable-2021-06/poltype/VersionFiles/water.key e> version.out
+Optimization terminated successfully.
+         Current function value: 0.779255
+         Iterations: 17
+         Function evaluations: 34
+Optimization terminated successfully.
+         Current function value: 0.779255
+         Iterations: 14
+         Function evaluations: 28
+Optimization terminated successfully.
+         Current function value: 0.779255
+         Iterations: 14
+         Function evaluations: 28
+Optimization terminated successfully.
+         Current function value: 0.268960
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 0.981840
+         Iterations: 17
+         Function evaluations: 34
+Optimization terminated successfully.
+         Current function value: 0.981840
+         Iterations: 14
+         Function evaluations: 28
+Optimization terminated successfully.
+         Current function value: 0.981840
+         Iterations: 14
+         Function evaluations: 28
+Optimization terminated successfully.
+         Current function value: 0.437714
+         Iterations: 15
+         Function evaluations: 30
+Optimization terminated successfully.
+         Current function value: 0.886713
+         Iterations: 14
+         Function evaluations: 28
+Optimization terminated successfully.
+         Current function value: 0.886713
+         Iterations: 14
+         Function evaluations: 28
+Optimization terminated successfully.
+         Current function value: 0.363523
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 0.822309
+         Iterations: 13
+         Function evaluations: 26
+Optimization terminated successfully.
+         Current function value: 0.822309
+         Iterations: 18
+         Function evaluations: 36
+Optimization terminated successfully.
+         Current function value: 0.822309
+         Iterations: 18
+         Function evaluations: 36
+Optimization terminated successfully.
+         Current function value: 0.209836
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 0.382334
+         Iterations: 17
+         Function evaluations: 34
+Optimization terminated successfully.
+         Current function value: 0.382334
+         Iterations: 14
+         Function evaluations: 28
+Optimization terminated successfully.
+         Current function value: 0.382334
+         Iterations: 14
+         Function evaluations: 28
+Optimization terminated successfully.
+         Current function value: 0.069598
+         Iterations: 15
+         Function evaluations: 30
+Optimization terminated successfully.
+         Current function value: 0.770046
+         Iterations: 17
+         Function evaluations: 34
+Optimization terminated successfully.
+         Current function value: 0.770046
+         Iterations: 17
+         Function evaluations: 34
+Optimization terminated successfully.
+         Current function value: 0.177912
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 0.755745
+         Iterations: 9
+         Function evaluations: 18
+Optimization terminated successfully.
+         Current function value: 0.755745
+         Iterations: 18
+         Function evaluations: 36
+Optimization terminated successfully.
+         Current function value: 0.755745
+         Iterations: 18
+         Function evaluations: 36
+Optimization terminated successfully.
+         Current function value: 0.231421
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 0.445978
+         Iterations: 17
+         Function evaluations: 34
+Optimization terminated successfully.
+         Current function value: 0.445978
+         Iterations: 14
+         Function evaluations: 28
+Optimization terminated successfully.
+         Current function value: 0.445978
+         Iterations: 14
+         Function evaluations: 28
+Optimization terminated successfully.
+         Current function value: 0.078012
+         Iterations: 15
+         Function evaluations: 30
+Optimization terminated successfully.
+         Current function value: 0.719470
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 0.719470
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 0.176167
+         Iterations: 16
+         Function evaluations: 32
+Traceback (most recent call last):
+  File "/fsx/users/francis/Software/poltype2/stable-2021-06/poltype/PoltypeModules/poltype.py", line 1784, in <module>
+    poltype.main()
+  File "/fsx/users/francis/Software/poltype2/stable-2021-06/poltype/PoltypeModules/poltype.py", line 1114, in main
+    params= self.GenerateParameters()
+  File "/fsx/users/francis/Software/poltype2/stable-2021-06/poltype/PoltypeModules/poltype.py", line 1746, in GenerateParameters
+    self.CheckTorsionParameters(self.key5fname,torsionsmissing,hydtorsions)
+  File "/fsx/users/francis/Software/poltype2/stable-2021-06/poltype/PoltypeModules/poltype.py", line 1100, in CheckTorsionParameters
+    raise ValueError("torsion parameters are all zero "+line+' path ='+os.getcwd())
+ValueError: torsion parameters are all zero torsion 419 408 411 420 0 0.0 1 0 180.0 2 0 0.0 3
+ path =/fsx/users/francis/gitlab/covid/June_novel_structures/Poltype/raw_files/run-aws/DS25
+Traceback (most recent call last):
+  File "/fsx/users/francis/Software/poltype2/stable-2021-06/poltype/PoltypeModules/poltype.py", line 1784, in <module>
+    poltype.main()
+  File "/fsx/users/francis/Software/poltype2/stable-2021-06/poltype/PoltypeModules/poltype.py", line 1114, in main
+    params= self.GenerateParameters()
+  File "/fsx/users/francis/Software/poltype2/stable-2021-06/poltype/PoltypeModules/poltype.py", line 1746, in GenerateParameters
+    self.CheckTorsionParameters(self.key5fname,torsionsmissing,hydtorsions)
+  File "/fsx/users/francis/Software/poltype2/stable-2021-06/poltype/PoltypeModules/poltype.py", line 1100, in CheckTorsionParameters
+    raise ValueError("torsion parameters are all zero "+line+' path ='+os.getcwd())
+ValueError: torsion parameters are all zero torsion 419 408 411 420 0 0.0 1 0 180.0 2 0 0.0 3
+ path =/fsx/users/francis/gitlab/covid/June_novel_structures/Poltype/raw_files/run-aws/DS25
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fsx/users/francis/Software/poltype2/stable-2021-06/poltype/PoltypeModules/poltype.py", line 1798, in <module>
+    raise ValueError('Houston, we have a problem. Buy a developer some coffee!')
+ValueError: Houston, we have a problem. Buy a developer some coffee!
