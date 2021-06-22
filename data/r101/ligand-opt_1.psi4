@@ -1,0 +1,49 @@
+molecule { 
+0 1
+ N   -1.783000   -1.701600    0.027600
+ C   -3.135300   -1.276000    0.048000
+ C   -3.413600    0.113200    0.495300
+ F   -4.666000    0.539900    0.109600
+ F   -3.283700    0.226000    1.872500
+ C   -2.357000    0.984100   -0.102200
+ C   -0.969800    0.536700   -0.122600
+ C    0.089000    1.424400   -0.206100
+ C    1.402700    1.009500   -0.225900
+ C    1.658300   -0.344500   -0.159400
+ C    0.622200   -1.252900   -0.075500
+ C   -0.678600   -0.807300   -0.057800
+ S    3.317800   -1.005200   -0.176900
+ C    4.465100    0.398100   -0.291900
+ O   -4.050600   -2.066400   -0.305200
+ O   -2.611600    2.104900   -0.597300
+ H    2.259800    1.663600   -0.289900
+ H   -0.129700    2.466400   -0.256500
+ H   -1.550700   -2.733300    0.077000
+ H    0.809700   -2.326100   -0.022300
+ H    4.185400    0.985700   -1.213900
+ H    4.298800    1.013200    0.629200
+ H    5.520800    0.047500   -0.348200
+}
+set {
+  geom_maxiter 400
+  g_convergence GAU_LOOSE
+  dynamic_level 1
+}
+memory 16GB
+set_num_threads(8)
+psi4_io.set_default_path("/scratch/Psi4-ligand")
+for _ in range(1):
+  try:
+    set opt_coordinates both
+    optimize('mp2/6-31+g*')
+    break
+  except OptimizationConvergenceError:
+    break
+  else:
+    try:
+      set opt_coordinates cartesian
+      optimize('mp2/6-31+g*')
+      break
+    except OptimizationConvergenceError:
+      pass
+clean()

@@ -12,6 +12,40 @@ All Rights Reserved
 ##############################################################################################################
 
 Calling: analyze.x /fsx/users/francis/Software/poltype2/stable-2021-06/poltype/VersionFiles/water.xyz -k /fsx/users/francis/Software/poltype2/stable-2021-06/poltype/VersionFiles/water.key e> version.out
+/fsx/users/francis/Software/poltype2/stable-2021-06/poltype/PoltypeModules/torsionfit.py:103: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if 'firstphaseprmindex' in torprm.keys() and nfold==1 and parms!='eval':
+/fsx/users/francis/Software/poltype2/stable-2021-06/poltype/PoltypeModules/torsionfit.py:103: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if 'firstphaseprmindex' in torprm.keys() and nfold==1 and parms!='eval':
+angle_list [[6], [36], [66], [96], [126], [156], [186], [216], [246], [276], [306], [336]] 12
+tor_energy_list [-3.3984176736749685, -1.8987611373551179, 1.7308304560128605, 2.454653174150735, 1.368072864693218, -0.45220434242207475, -1.2995999999999999, -0.5642843258285897, 1.8960295817008248, 1.4215335988465707, 0.016886614727601668, -2.1196514911906785] 12
+Optimization terminated successfully.
+         Current function value: 1.786722
+         Iterations: 16
+         Function evaluations: 32
+angle_list [[24], [54], [84], [114], [144], [174], [204], [234], [264], [294], [324], [354]] 12
+tor_energy_list [0.9971680388810125, 0.6832439411200593, 1.1673103455895575, 1.3286126812918102, 0.9301323581773797, -0.01559999999999917, 0.7987359921563435, 2.1331016649512566, 1.6119607140673313, 0.6854844684712589, 1.2563031881861395, 1.340143121663294] 12
+Optimization terminated successfully.
+         Current function value: 0.514932
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 1.786138
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 1.134782
+         Iterations: 17
+         Function evaluations: 34
+Torset ((11, 10, 13, 14),) RMSD(MM2,QM) 1.7861375615011976
+Optimization terminated successfully.
+         Current function value: 0.508949
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 0.113702
+         Iterations: 13
+         Function evaluations: 26
+Torset ((21, 14, 13, 10),) RMSD(MM2,QM) 0.5089491751911488
 Optimization terminated successfully.
          Current function value: 0.779255
          Iterations: 17

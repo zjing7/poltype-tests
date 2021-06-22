@@ -1,0 +1,56 @@
+molecule { 
+0 1
+ N   -0.555606   -1.328384    0.316301
+ C   -1.843995   -1.209938    0.766643
+ C   -2.457171    0.228512    0.717745
+ F   -3.649329    0.149092    0.032774
+ F   -2.728985    0.603858    2.013840
+ C   -1.591446    1.358272    0.059613
+ C   -0.215312    1.008787   -0.361758
+ C    0.622025    1.992803   -0.932454
+ C    1.932202    1.686327   -1.320336
+ C    2.438369    0.369771   -1.164336
+ C    1.595077   -0.618867   -0.607988
+ C    0.279813   -0.316326   -0.213483
+ S    4.098790   -0.085474   -1.593447
+ C    4.805911   -0.802010   -0.083296
+ O   -2.444338   -2.188728    1.186580
+ O   -2.042992    2.491575   -0.075226
+ H    2.553016    2.482899   -1.730021
+ H    0.224807    3.000814   -1.055606
+ H   -0.214577   -2.277881    0.379353
+ H    1.963514   -1.638628   -0.493596
+ H    4.877510   -0.023957    0.683325
+ H    4.182814   -1.626032    0.274743
+ H    5.807940   -1.178550   -0.310334
+}
+set optking { 
+  frozen_dihedral = ("
+    11 10 13 14
+    9 10 13 14
+    21 14 13 10
+  ")
+}
+set {
+  geom_maxiter 400
+  g_convergence GAU_LOOSE
+  dynamic_level 1
+}
+memory 16GB
+set_num_threads(8)
+psi4_io.set_default_path("/scratch/Psi4-ligand")
+for _ in range(1):
+  try:
+    set opt_coordinates both
+    optimize('wb97x-d/6-31+G*')
+    break
+  except OptimizationConvergenceError:
+    break
+  else:
+    try:
+      set opt_coordinates cartesian
+      optimize('wb97x-d/6-31+G*')
+      break
+    except OptimizationConvergenceError:
+      pass
+clean()
